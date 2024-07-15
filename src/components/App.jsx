@@ -6,7 +6,7 @@ import Section from './Section/Section';
 import Notification from './Notification/Notification';
 import styles from './App.module.css';
 
-const App = () => {
+export const App = () => {
   const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });
 
   const handleFeedback = type => {
@@ -55,7 +55,7 @@ const App = () => {
 };
 
 App.propTypes = {
-  feedback: PropTypes.shape({
+  state: PropTypes.shape({
     good: PropTypes.number.isRequired,
     neutral: PropTypes.number.isRequired,
     bad: PropTypes.number.isRequired,
